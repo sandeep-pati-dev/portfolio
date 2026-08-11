@@ -221,7 +221,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex gap-3 justify-center items-center mt-5">
-              {/* <Link href="/resume.pdf" target="_blank" className="backdrop-blur-lg bg-black/5 px-3 py-2.5 rounded-lg font-semibold cursor-pointer hover:bg-white/10 duration-300 border-[1] border-gray-200 transition-transform transform hover:scale-105">View Resume</Link>
+              {/* <Link href="/resume1.pdf" target="_blank" className="backdrop-blur-lg bg-black/5 px-3 py-2.5 rounded-lg font-semibold cursor-pointer hover:bg-white/10 duration-300 border-[1] border-gray-200 transition-transform transform hover:scale-105">View Resume</Link>
               <Link href={'/projects'} className="backdrop-blur-lg bg-black/5 px-3 py-2.5 rounded-lg font-semibold cursor-pointer hover:bg-white/10 duration-300 border-[1] border-gray-200 transition-transform transform hover:scale-105">View Projects</Link> */}
 
               <div className="flex flex-wrap gap-4 mt-3 justify-center lg:justify-start">
@@ -231,7 +231,7 @@ export default function Home() {
                   transition={{ delay: 0.8 }}
                 >
                   <Link
-                    href="/resume.pdf"
+                    href="/resume1.pdf"
                     target="_blank"
                     className="group relative flex items-center gap-3 px-6 py-3.5 rounded-2xl overflow-hidden md:backdrop-blur-xl bg-white/10 border border-gray-300 shadow-lg cursor-pointer"
                   >

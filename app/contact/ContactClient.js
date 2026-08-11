@@ -62,7 +62,7 @@
 //               </div>
 
 //               <div className='text-center'>
-//                 <Link href="/resume.pdf" target="_blank" className="mt-4 inline-block bg-purple-700 text-white w-full py-2 rounded-md shadow-md hover:bg-purple-700/70 transition-colors duration-400 hover:cursor-pointer" >
+//                 <Link href="/resume1.pdf" target="_blank" className="mt-4 inline-block bg-purple-700 text-white w-full py-2 rounded-md shadow-md hover:bg-purple-700/70 transition-colors duration-400 hover:cursor-pointer" >
 //                   <span className='flex justify-center items-center gap-2'><DownloadIcon className='w-5 h-5'/>Download Resume</span>
 //                 </Link>
 //               </div>
@@ -226,7 +226,7 @@ const Contact = () => {
                 </span>
               </Link>
             </div>
-            <Link href="/resume.pdf" target="_blank" className="group relative mt-5 flex items-center justify-center gap-3 px-6 py-3 rounded-2xl overflow-hidden bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] text-white shadow-lg cursor-pointer hover:scale-105 transition-all duration-300">
+            <Link href="/resume1.pdf" target="_blank" className="group relative mt-5 flex items-center justify-center gap-3 px-6 py-3 rounded-2xl overflow-hidden bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] text-white shadow-lg cursor-pointer hover:scale-105 transition-all duration-300">
               <div className="absolute inset-0 bg-black/20 translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
               <div className="relative z-10 flex items-center gap-3">
                 <div className="p-2 rounded-xl bg-white/20 group-hover:bg-white/30 duration-300">

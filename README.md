@@ -247,7 +247,7 @@ sandeep-portfolio
 │   ├── avatar.png
 │   ├── bg.webp
 │   ├── logo.png
-│   ├── resume.pdf
+│   ├── resume1.pdf
 │   ├── sitemap.xml
 │   ├── robots.txt
 │   └── opengraph images

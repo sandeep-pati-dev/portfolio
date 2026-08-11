@@ -89,7 +89,7 @@ const ChatBotDialog = ({ open, setOpen }) => {
         <div>
           <p>You can view Sandeep's resume here:</p>
           <a
-            href="/resume.pdf"
+            href="/resume1.pdf"
             target="_blank"
             className="block mt-2 text-blue-400 underline"
           >

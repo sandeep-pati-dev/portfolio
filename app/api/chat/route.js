@@ -75,7 +75,7 @@ LinkedIn:
 https://www.linkedin.com/in/sandeep-pati-537ba030b/
 
 Resume:
-${portfolioUrl}/resume.pdf
+${portfolioUrl}/resume1.pdf
 
 ANSWER RULES:
 
