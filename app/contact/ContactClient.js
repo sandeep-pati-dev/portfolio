@@ -81,18 +81,18 @@
 //                   <Label htmlFor="name"><User2Icon/><span>Your name</span></Label>
 //                   <input className='border-[1] border-b-gray-200 rounded-sm pl-2 p-1' name="user_name" autoComplete="name" id="name" type="text" placeholder="Enter your name" required maxLength={30}/>
 //                 </div>
-    
+
 //                 <div className="mt-5 flex flex-col gap-2">
 //                   <Label htmlFor="email"><MailIcon/> <span>Your Email</span></Label>
 //                   <input className='border-[1] border-b-gray-200 rounded-sm pl-2 p-1' name="user_email" autoComplete="email" id="email" type="email" placeholder="Enter your email" required maxLength={50}/>
 //                 </div>
 //               </div>
-  
+
 //               <div className="mt-5 flex flex-col gap-2">
 //                 <Label htmlFor="message"><MessageCircleIcon/><span>Message</span></Label>
 //                 <textarea className='h-[15vh] border-[1] border-b-gray-200 rounded-sm pl-2 p-1' name="message" id="message" placeholder="Write your message here..." rows={5} required />
 //               </div>
-  
+
 //               <Button value="Send" type="submit" className="w-full py-2 mt-5 bg-purple-700 cursor-pointer hover:bg-purple-700/70">
 //                 {loading ? <div className='flex justify-center items-center gap-2'><Loader2 className='animate-spin'/> <span>Please wait...</span></div> : <div className='flex justify-center items-center gap-1'><Send/><span>Send Message</span></div>}
 //               </Button>
@@ -134,7 +134,7 @@ import {
 
 const Contact = () => {
   const form = useRef();
-  const [loading,setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -148,22 +148,22 @@ const Contact = () => {
         publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY
       }
     )
-    .then(() => {
-      form.current.reset();
-      toast.success("Message sent successfully!", {
-        icon: <Info/>,
-        className: 'custom-toast'
+      .then(() => {
+        form.current.reset();
+        toast.success("Message sent successfully!", {
+          icon: <Info />,
+          className: 'custom-toast'
+        });
+      })
+      .catch(() => {
+        toast.error("Failed to send message.", {
+          icon: <Info />,
+          className: 'custom-toast'
+        });
+      })
+      .finally(() => {
+        setLoading(false);
       });
-    })
-    .catch(() => {
-      toast.error("Failed to send message.", {
-        icon: <Info/>,
-        className: 'custom-toast'
-      });
-    })
-    .finally(() => {
-      setLoading(false);
-    });
 
   };
 
@@ -183,16 +183,16 @@ const Contact = () => {
           </p>
         </div>
         <div className="mt-8 grid lg:grid-cols-5 gap-6">
-          <motion.div initial={{opacity:0,x:-40}} whileInView={{opacity:1,x:0}} transition={{duration:0.8}} viewport={{once:true}} className="lg:col-span-2 rounded-3xl p-6 bg-white/5 md:backdrop-blur-lg border border-gray-200/40 shadow-xl">
+          <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="lg:col-span-2 rounded-3xl p-6 bg-white/5 md:backdrop-blur-lg border border-gray-200/40 shadow-xl">
             <div className="flex items-center gap-3">
-              <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"/>
+              <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
               <p className="font-bold">
                 Available for opportunities
               </p>
             </div>
             <div className="mt-6 flex items-center gap-4">
               <Avatar className="w-16 h-16 rounded-2xl border-2 border-blue-700 shadow-lg">
-                <AvatarImage src="https://github.com/sandeep14032004.png" className="object-cover"/>
+                <AvatarImage src="https://github.com/sandeep14032004.png" className="object-cover" />
                 <AvatarFallback>
                   SP
                 </AvatarFallback>
@@ -212,25 +212,25 @@ const Contact = () => {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="https://github.com/sandeep14032004" target="_blank" className="group relative flex items-center gap-2 px-4 py-3 rounded-2xl overflow-hidden md:backdrop-blur-xl bg-white/10 border border-gray-300 shadow-lg cursor-pointer hover:scale-105 transition-all duration-300">
-                <div className="absolute inset-0 bg-black/20 translate-x-full group-hover:translate-x-0 transition-transform duration-500"/>
-                <Github className="relative z-10 group-hover:rotate-12 transition duration-300"/>
+                <div className="absolute inset-0 bg-black/20 translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+                <Github className="relative z-10 group-hover:rotate-12 transition duration-300" />
                 <span className="relative z-10 font-bold">
                   GitHub
                 </span>
               </Link>
               <Link href="https://www.linkedin.com/in/sandeep-pati-537ba030b/" target="_blank" className="group relative flex items-center gap-2 px-4 py-3 rounded-2xl overflow-hidden md:backdrop-blur-xl bg-white/10 border border-gray-300 shadow-lg cursor-pointer hover:scale-105 transition-all duration-300">
-                <div className="absolute inset-0 bg-blue-600/20 translate-x-full group-hover:translate-x-0 transition-transform duration-500"/>
-                <Linkedin className="relative z-10 group-hover:rotate-12 transition duration-300"/>
+                <div className="absolute inset-0 bg-blue-600/20 translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+                <Linkedin className="relative z-10 group-hover:rotate-12 transition duration-300" />
                 <span className="relative z-10 font-bold">
                   LinkedIn
                 </span>
               </Link>
             </div>
             <Link href="/resume.pdf" target="_blank" className="group relative mt-5 flex items-center justify-center gap-3 px-6 py-3 rounded-2xl overflow-hidden bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] text-white shadow-lg cursor-pointer hover:scale-105 transition-all duration-300">
-              <div className="absolute inset-0 bg-black/20 translate-x-full group-hover:translate-x-0 transition-transform duration-500"/>
+              <div className="absolute inset-0 bg-black/20 translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
               <div className="relative z-10 flex items-center gap-3">
                 <div className="p-2 rounded-xl bg-white/20 group-hover:bg-white/30 duration-300">
-                  <FileText size={20} className="group-hover:rotate-12 duration-300"/>
+                  <FileText size={20} className="group-hover:rotate-12 duration-300" />
                 </div>
                 <div>
                   <p className="font-bold">
@@ -243,11 +243,11 @@ const Contact = () => {
               </div>
             </Link>
             <div className="mt-5 flex items-center gap-2 text-sm text-gray-600 font-semibold items-start">
-              <MapPin size={18} className="text-blue-700"/>
+              <MapPin size={18} className="text-blue-700" />
               Odisha, India
             </div>
           </motion.div>
-          <motion.div initial={{opacity:0,x:40}} whileInView={{opacity:1,x:0}} transition={{duration:0.8}} viewport={{once:true}} className="lg:col-span-3 rounded-3xl p-6 bg-white/5 md:backdrop-blur-lg border border-gray-200/40 shadow-xl">
+          <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="lg:col-span-3 rounded-3xl p-6 bg-white/5 md:backdrop-blur-lg border border-gray-200/40 shadow-xl">
             <h2 className="text-3xl font-black">
               Send a message
             </h2>
@@ -259,31 +259,31 @@ const Contact = () => {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="flex items-center gap-2 font-bold mb-2">
-                    <User size={18}/>
+                    <User size={18} />
                     Name
                   </label>
-                  <input name="user_name" required placeholder="Your name" className="w-full p-3 rounded-xl bg-white/10 border border-gray-300 outline-none"/>
+                  <input name="name" required placeholder="Your name" className="w-full p-3 rounded-xl bg-white/10 border border-gray-300 outline-none" />
                 </div>
                 <div>
                   <label className="flex items-center gap-2 font-bold mb-2">
-                    <Mail size={18}/>
+                    <Mail size={18} />
                     Email
                   </label>
-                  <input name="user_email" required type="email" placeholder="Your email" className="w-full p-3 rounded-xl bg-white/10 border border-gray-300 outline-none"/>
+                  <input name="email" required type="email" placeholder="Your email" className="w-full p-3 rounded-xl bg-white/10 border border-gray-300 outline-none" />
                 </div>
               </div>
               <div>
                 <label className="flex items-center gap-2 font-bold mb-2">
-                  <MessageCircle size={18}/>
+                  <MessageCircle size={18} />
                   Message
                 </label>
-                <textarea name="message" required placeholder="Write your message..." className="w-full h-36 p-3 rounded-xl bg-white/10 border border-gray-300 outline-none resize-none"/>
+                <textarea name="message" required placeholder="Write your message..." className="w-full h-36 p-3 rounded-xl bg-white/10 border border-gray-300 outline-none resize-none" />
               </div>
               <button type="submit" className="group relative w-full flex items-center bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] justify-center gap-3 px-6 py-3.5 rounded-2xl overflow-hidden  border border-gray-300 shadow-lg cursor-pointer hover:scale-[1.02] transition-all duration-300 text-white">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#06b6d4] via-[#3b82f6] to-[#2563eb] opacity-0 group-hover:opacity-100 duration-500"/>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#06b6d4] via-[#3b82f6] to-[#2563eb] opacity-0 group-hover:opacity-100 duration-500" />
                 <div className="relative z-10 flex items-center gap-3">
                   <div className="p-2 rounded-xl bg-white/20 duration-300 flex justify-center items-center">
-                    {loading ? <Loader2 className="animate-spin"/> : <Send className="group-hover:scale-105 duration-300 pr-0.5"/>}
+                    {loading ? <Loader2 className="animate-spin" /> : <Send className="group-hover:scale-105 duration-300 pr-0.5" />}
                   </div>
                   <div>
                     <p className="font-bold">
@@ -300,7 +300,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <motion.section initial={{opacity:0,y:40}} whileInView={{opacity:1,y:0}} transition={{duration:0.8}} viewport={{once:true}} className="mt-14 px-4">
+      <motion.section initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="mt-14 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center">
             <h2 className="text-3xl font-black">
@@ -352,13 +352,13 @@ const Contact = () => {
             <p className="mt-3 text-gray-600 font-semibold">
               Let's discuss it and create something meaningful together.
             </p>
-      
+
             <div className="flex justify-center mt-3">
               <Link href="mailto:sandeeppati69@gmail.com" className="group relative w-fit flex items-center gap-3 px-6 py-3.5 rounded-2xl overflow-hidden bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] text-white shadow-lg cursor-pointer hover:scale-105 transition-all duration-300">
-                <div className="absolute inset-0 bg-black/20 translate-x-full group-hover:translate-x-0 duration-500"/>
+                <div className="absolute inset-0 bg-black/20 translate-x-full group-hover:translate-x-0 duration-500" />
                 <div className="relative z-10 flex items-center gap-3">
                   <div className="p-2 rounded-xl bg-white/20 group-hover:bg-white/30 duration-300">
-                    <Mail size={20} className="group-hover:rotate-12 duration-300"/>
+                    <Mail size={20} className="group-hover:rotate-12 duration-300" />
                   </div>
                   <div className='text-start'>
                     <p className="font-bold">
@@ -374,7 +374,7 @@ const Contact = () => {
           </div>
         </div>
       </motion.section>
-      </section>
+    </section>
   )
 }
 export default Contact;

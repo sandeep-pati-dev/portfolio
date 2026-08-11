@@ -290,9 +290,13 @@ npm install
 Create a `.env.local` file in the project root.
 
 ```env
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+# Gemini API Key (For AI Portfolio Assistant Chatbot)
+GEMINI_API_KEY=your_gemini_api_key
+
+# EmailJS Configuration (For contact form)
+NEXT_PUBLIC_SERVICE_ID=your_service_id
+NEXT_PUBLIC_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_PUBLIC_KEY=your_public_key
 ```
 
 ## 5. Start the Development Server
