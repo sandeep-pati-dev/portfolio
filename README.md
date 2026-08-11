@@ -1,4 +1,4 @@
-# Abad Ali Portfolio
+# Sandeep Pati Portfolio
 
 <p align="center">
 
@@ -27,13 +27,13 @@ The application is designed with a strong focus on performance, accessibility, u
 ## Live Demo
 
 <p align="center">
-  <a href="https://abadali.vercel.app">
+  <a href="https://sandeep-pati.vercel.app">
     <img src="https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
-  <a href="https://github.com/Abad-Ali/abadali-portfolio">
+  <a href="https://github.com/sandeep-pati-dev/portfolio">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="https://www.linkedin.com/in/abadali-dev">
+  <a href="https://www.linkedin.com/in/sandeep-pati-537ba030b/">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
 </p>
@@ -100,7 +100,7 @@ The application is designed with a strong focus on performance, accessibility, u
 
 ## Table of Contents
 
-- [Abad Ali Portfolio](#abad-ali-portfolio)
+- [Sandeep Pati Portfolio](#sandeep-pati-portfolio)
 - [Preview](#preview)
 - [Project Highlights](#project-highlights)
 - [Introduction](#introduction)
@@ -194,7 +194,7 @@ It is built using the latest version of Next.js with the App Router architecture
 ## Project Structure
 
 ```text
-abadali-portfolio
+sandeep-portfolio
 │
 ├── app
 │   ├── about
@@ -270,13 +270,13 @@ Follow the steps below to run the project locally.
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Abad-Ali/abadali-portfolio.git
+git clone https://github.com/sandeep-pati-dev/portfolio.git
 ```
 
 ## 2. Navigate to the Project Directory
 
 ```bash
-cd abadali-portfolio
+cd sandeep-portfolio
 ```
 
 ## 3. Install Dependencies
@@ -346,7 +346,7 @@ The application is deployed on **Vercel** with automatic deployments connected t
 Live Website:
 
 <p align="left">
-  <a href="https://abadali.vercel.app/" target="_blank">
+  <a href="https://sandeep-pati.vercel.app/" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-Visit%20Website-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
   </a>
 </p>
@@ -373,25 +373,25 @@ Some features planned for future updates include:
 
 ## Author
 
-**Abad Ali**
+**Sandeep Pati**
 Full Stack Developer
 
 Passionate about building modern, scalable, and user-friendly web applications using the latest technologies.
 
 <p align="left">
-  <a href="https://abadali.vercel.app/" target="_blank">
+  <a href="https://sandeep-pati.vercel.app/" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-Visit%20Website-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
   </a>
 
-  <a href="https://github.com/Abad-Ali" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-Abad--Ali-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  <a href="https://github.com/sandeep-pati-dev" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-sandeep--pati--dev-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
 
-  <a href="https://www.linkedin.com/in/abadali-dev" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Abad%20Ali-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  <a href="https://www.linkedin.com/in/sandeep-pati-537ba030b/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Sandeep%20Pati-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
 
-  <a href="mailto:abadali1707@gmail.com">
+  <a href="mailto:sandeeppati69@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
@@ -401,7 +401,7 @@ Passionate about building modern, scalable, and user-friendly web applications u
 
 ## Usage Policy
 
-This portfolio was designed and developed by **Abad Ali**.
+This portfolio was designed and developed by **Sandeep Pati**.
 
 You are welcome to explore the source code, learn from the implementation, and use it as a reference for your own projects.
 

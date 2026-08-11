@@ -121,7 +121,7 @@ const ChatBotDialog = ({ open, setOpen }) => {
     ) {
       return (
         <div>
-          <p>Abad works with modern full-stack technologies:</p>
+          <p>Sandeep works with modern full-stack technologies:</p>
           <ul className="mt-2 ml-5 list-disc">
             <li>Next.js & React.js</li>
             <li>Node.js & Express.js</li>

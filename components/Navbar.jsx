@@ -25,12 +25,12 @@
 //   return (
 //     <div className='fixed top-2 z-10 w-[50vw] backdrop-blur-lg bg-black/5 px-5 py-3 rounded-4xl border-2 border-gray-200'>
 //       <div className='flex items-center justify-between'>
-//         <Link href='https://github.com/Abad-Ali' target='_blank'><div className='flex items-center gap-2 cursor-pointer'>
+//         <Link href='https://github.com/sandeep-pati-dev' target='_blank'><div className='flex items-center gap-2 cursor-pointer'>
 //             <Avatar className="w-10 h-10 border-2 border-gray-200">
 //               <AvatarImage src='https://avatars.githubusercontent.com/u/223816766?v=4&size=64' alt="Profile_pic"/>
-//               <AvatarFallback>AA</AvatarFallback>
+//               <AvatarFallback>SP</AvatarFallback>
 //             </Avatar>
-//             <h1 className='font-bold text-lg'>Abad Ali</h1>
+//             <h1 className='font-bold text-lg'>Sandeep Pati</h1>
 //         </div></Link>
 
 //         <div className='flex items-center'>

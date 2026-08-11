@@ -1,4 +1,4 @@
-# robots.txt for abadali.vercel.app
+# robots.txt for sandeep-pati.vercel.app
 
 User-agent: *
 Allow: /
@@ -10,4 +10,4 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemap location
-Sitemap: https://abadali.vercel.app/sitemap.xml
+Sitemap: https://sandeep-pati.vercel.app/sitemap.xml
