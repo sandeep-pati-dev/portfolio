@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+  font-family: sans-serif;
+}
+
+@keyframes float-space {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  20% { transform: translate(15px, -10px) rotate(3deg); }
+  40% { transform: translate(-12px, 12px) rotate(-3deg); }
+  60% { transform: translate(10px, -15px) rotate(3.5deg); }
+  80% { transform: translate(-15px, 10px) rotate(-3.5deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+.animate-float-space {
+  animation: float-space 10s linear infinite;
+}
+
+
+@keyframes float-space-scale {
+  0%, 100% { transform: translate(0px, 0px) rotate(0deg) scale(1); }
+  20% { transform: translate(15px, -10px) rotate(3deg) scale(1.02); }
+  40% { transform: translate(-12px, 12px) rotate(-3deg) scale(0.98); }
+  60% { transform: translate(10px, -15px) rotate(3.5deg) scale(1.02); }
+  80% { transform: translate(-15px, 10px) rotate(-3.5deg) scale(0.98); }
+}
+
+.animate-float-space-scale {
+  animation: float-space-scale 10s linear infinite;
+}
+
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease forwards;
+}
+
+
+/* Hide scrollbar for Firefox */
+.scroll-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.custom-toast {
+  background: #000 !important;
+
+  color: #fff !important;
+
+  border: 1px solid rgba(255,255,255,0.15) !important;
+
+  border-radius: 12px !important;
+
+  padding: 12px 18px !important;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35) !important;
+}
+
+
+/* Hide scrollbar for Firefox */
+.scroll-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+
+/* WebKit Browsers (Chrome, Edge, Safari) */
+.scrollable::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 20px; /* visually reduce thumb height */
+  margin-bottom: 20px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #111827;
+  border-radius: 999px;
+  background-clip: content-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Firefox & others */
+.scrollable {
+  scrollbar-width: thin;
+  scrollbar-color: #111827 transparent;
+}
+
+/* Custom Cursor Trailer */
+.cursor-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin-top: 0;
+  margin-left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  background-color: #6ee7b7;
+  box-shadow: 0px 0px 30px 0px rgb(16, 185, 129);
+  mix-blend-mode: difference;
+  transition: margin-top 0.3s ease-out, margin-left 0.3s ease-out, width 0.3s ease-out, height 0.3s ease-out;
+}
+.cursor-icons {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: calc(var(--cursorH) - 20px);
+  transition: all 0.5s ease-out, height 0.5s ease-in-out;
+}
+.cursor-disable {
+  width: 0 !important;
+  height: 0 !important;
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+@media only screen and (min-width: 600px) {
+  .cursor-main {
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+  }
+  .cursor-disable {
+    width: 0 !important;
+    height: 0 !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+  }
+}
