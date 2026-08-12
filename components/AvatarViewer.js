@@ -189,6 +189,7 @@ export default function AvatarViewer() {
               height: "100%",
               background: "transparent",
               display: "block",
+              touchAction: "pan-y",
             }}
           />
         </motion.div>
