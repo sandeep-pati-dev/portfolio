@@ -110,12 +110,11 @@
 
 
 
-'use client'
+"use client";
 
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -140,14 +139,24 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs.sendForm(
-      process.env.NEXT_PUBLIC_SERVICE_ID,
-      process.env.NEXT_PUBLIC_TEMPLATE_ID,
-      form.current,
-      {
-        publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY
-      }
-    )
+    const formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      message: e.target.message.value
+    };
+
+    fetch("https://formsubmit.co/ajax/sandeeppati69@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(formData)
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to send");
+        return res.json();
+      })
       .then(() => {
         form.current.reset();
         toast.success("Message sent successfully!", {
@@ -164,7 +173,6 @@ const Contact = () => {
       .finally(() => {
         setLoading(false);
       });
-
   };
 
   return (
