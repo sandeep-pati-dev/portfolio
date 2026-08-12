@@ -207,4 +207,43 @@ html {
   -webkit-text-fill-color: transparent !important;
   color: transparent !important;
   display: inline-block;
+}
+
+/* Custom Swiper navigation arrows */
+.swiper-button-next, .swiper-button-prev {
+  color: #3b82f6 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 9999px !important;
+  transition: all 0.3s ease-out !important;
+}
+
+.dark .swiper-button-next, .dark .swiper-button-prev {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background: rgba(37, 99, 235, 0.15) !important;
+  border-color: rgba(37, 99, 235, 0.4) !important;
+  transform: scale(1.08);
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 18px !important;
+  font-weight: 900 !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .swiper-button-next, .swiper-button-prev {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 14px !important;
+  }
 }

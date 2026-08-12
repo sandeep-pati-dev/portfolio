@@ -5,13 +5,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import { Badge } from '@/components/ui/badge';
 import { LinkIcon, GithubIcon, Eye, BookOpen } from 'lucide-react';
 import { projects } from '@/app/projects/projectsData';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import 'swiper/css/navigation';
 
 export default function FeaturedProjectsSlider() {
   return (
@@ -25,7 +26,8 @@ export default function FeaturedProjectsSlider() {
         disableOnInteraction: false, // Keep autoplay after user interaction
         pauseOnMouseEnter: true,
       }}
-      modules={[Autoplay]}
+      navigation={true}
+      modules={[Autoplay, Navigation]}
       className="lg:h-[65vh] w-[90vw] flex justify-center items-center rounded-xl"
     >
       {projects.map((project, index) => (
