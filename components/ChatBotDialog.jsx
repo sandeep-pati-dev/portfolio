@@ -73,11 +73,11 @@ const ChatBotDialog = ({ open, setOpen }) => {
               LinkedIn: sandeep-pati
             </a>
             <a
-              href="https://github.com/sandeep14032004"
+              href="https://github.com/sandeep-pati-dev"
               target="_blank"
               className="block text-blue-400 underline"
             >
-              GitHub: sandeep14032004
+              GitHub: sandeep-pati-dev
             </a>
           </div>
         </div>
@@ -102,10 +102,10 @@ const ChatBotDialog = ({ open, setOpen }) => {
         <div>
           <p>Some featured projects:</p>
           <ul className="mt-2 ml-5 list-disc">
-            <li>DocMind AI</li>
-            <li>NexaConnect</li>
-            <li>Enterprise Task Hub</li>
-            <li>TaskFlow</li>
+            <li>NexChat (Real-time Chat App)</li>
+            <li>LinkPulse (Link Management App)</li>
+            <li>Expensio (Expense Tracker App)</li>
+            <li>CodeStreak (DSA Tracker Platform)</li>
           </ul>
           <a href="/projects" className="block mt-3 text-blue-400 underline">
             View All Projects

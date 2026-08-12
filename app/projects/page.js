@@ -53,7 +53,7 @@ export default function ProjectsPage() {
       "@type": "Person",
       "name": "Sandeep Pati",
       "sameAs": [
-        "https://github.com/sandeep14032004",
+        "https://github.com/sandeep-pati-dev",
         "https://linkedin.com/in/sandeep-pati-537ba030b"
       ]
     }

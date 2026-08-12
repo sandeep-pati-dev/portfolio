@@ -64,7 +64,7 @@ export default function AboutPage() {
         "REST API Design", "Object-Oriented Programming (OOP)", "Algorithms"
       ],
       "sameAs": [
-        "https://github.com/sandeep14032004",
+        "https://github.com/sandeep-pati-dev",
         "https://linkedin.com/in/sandeep-pati-537ba030b"
       ]
     }

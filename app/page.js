@@ -56,7 +56,7 @@ export default function HomePage() {
     },
     "knowsAbout": ["Software Development", "Java Ecosystem", "MERN Stack", "Database Design", "Object-Oriented Programming (OOP)", "Data Structures & Algorithms", "SQL", "MongoDB", "JavaScript"],
     "sameAs": [
-      "https://github.com/sandeep14032004",
+      "https://github.com/sandeep-pati-dev",
       "https://linkedin.com/in/sandeep-pati-537ba030b"
     ]
   };

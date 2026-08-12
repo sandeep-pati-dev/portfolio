@@ -61,7 +61,7 @@ const Footer = () => {
               Connect
             </h3>
             <div className="mt-4 flex flex-wrap gap-3">
-              <Link href="https://github.com/sandeep14032004" target="_blank" className="group p-3 rounded-2xl bg-slate-900 border border-slate-700 hover:border-purple-500 hover:scale-110 duration-300">
+              <Link href="https://github.com/sandeep-pati-dev" target="_blank" className="group p-3 rounded-2xl bg-slate-900 border border-slate-700 hover:border-purple-500 hover:scale-110 duration-300">
                 <GithubIcon className="group-hover:text-purple-400 group-hover:rotate-12 duration-300"/>
               </Link>
               <Link href="https://www.linkedin.com/in/sandeep-pati-537ba030b/" target="_blank" className="group p-3 rounded-2xl bg-slate-900 border border-slate-700 hover:border-blue-500 hover:scale-110 duration-300">

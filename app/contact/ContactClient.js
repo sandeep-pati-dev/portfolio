@@ -219,7 +219,7 @@ const Contact = () => {
               Java, SQL, and the MERN stack while prioritizing performance, clean architectures, and reliable solutions.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="https://github.com/sandeep14032004" target="_blank" className="group relative flex items-center gap-2 px-4 py-3 rounded-2xl overflow-hidden md:backdrop-blur-xl bg-white/10 border border-gray-300 shadow-lg cursor-pointer hover:scale-105 transition-all duration-300">
+              <Link href="https://github.com/sandeep-pati-dev" target="_blank" className="group relative flex items-center gap-2 px-4 py-3 rounded-2xl overflow-hidden md:backdrop-blur-xl bg-white/10 border border-gray-300 shadow-lg cursor-pointer hover:scale-105 transition-all duration-300">
                 <div className="absolute inset-0 bg-black/20 translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
                 <Github className="relative z-10 group-hover:rotate-12 transition duration-300" />
                 <span className="relative z-10 font-bold">

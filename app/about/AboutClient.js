@@ -164,7 +164,7 @@ const About = () => {
                 initial={{opacity:0,y:10}}
                 whileInView={{opacity:1,y:0}}
                 transition={{delay:0.8}}>
-                  <Link href='https://github.com/sandeep14032004' target='_blank' className="group flex items-center gap-3 px-2.5 md:px-5 py-3.5 rounded-2xl border border-gray-300 dark:border-white/20 bg-gray-100/60 dark:bg-white/5 backdrop-blur-xl hover:scale-105 transition hover:bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] duration-500">
+                  <Link href='https://github.com/sandeep-pati-dev' target='_blank' className="group flex items-center gap-3 px-2.5 md:px-5 py-3.5 rounded-2xl border border-gray-300 dark:border-white/20 bg-gray-100/60 dark:bg-white/5 backdrop-blur-xl hover:scale-105 transition hover:bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] duration-500">
                    <div className="p-2 rounded-xl bg-white/20 group-hover:rotate-12 duration-300">
                      <GithubIcon size={18}/>
                    </div>

@@ -20,7 +20,7 @@ export default function FloatingContact() {
     {
       name: "GitHub",
       icon: <Github className="group-hover:text-purple-400 group-hover:rotate-12 duration-300" size={21} />,
-      href: "https://github.com/sandeep14032004",
+      href: "https://github.com/sandeep-pati-dev",
       hoverClasses: "hover:border-purple-500 hover:text-white group"
     },
     {
