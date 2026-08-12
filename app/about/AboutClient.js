@@ -199,10 +199,12 @@ const About = () => {
           </motion.div>
         </section>
 
-        {/* Education Section (Certifications omitted as requested) */}
-
         <section>
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: "easeInOut" }}><EducationSection/></motion.div>
+        </section>
+
+        <section className="my-[5vh]">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: "easeInOut" }}><Certifications/></motion.div>
         </section>
 
        <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: "easeInOut" }} viewport={{ once: true }} className="mt-14 px-4">        
