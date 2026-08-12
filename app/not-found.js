@@ -65,13 +65,13 @@ export default function NotFound() {
           </div>
 
           {/* 404 */}
-          <h1 className=" mt-6 text-[120px] md:text-[160px] leading-none font-black bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] bg-clip-text text-transparent">
+          <h1 className=" mt-6 text-[120px] md:text-[160px] leading-none font-black gradient-text">
             404
           </h1>
 
           <h2 className="text-3xl md:text-5xl font-bold">
             Lost in{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="gradient-text">
               Digital Space
             </span>
           </h2>

@@ -198,4 +198,13 @@ html {
     margin-top: 0 !important;
     margin-left: 0 !important;
   }
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #2563eb, #3b82f6, #06b6d4) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  display: inline-block;
 }

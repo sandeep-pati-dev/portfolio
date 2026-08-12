@@ -5,13 +5,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Mousewheel } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import { Badge } from '@/components/ui/badge';
 import { LinkIcon, GithubIcon, Eye, BookOpen } from 'lucide-react';
 import { projects } from '@/app/projects/projectsData';
 
 import 'swiper/css';
-import 'swiper/css/mousewheel';
 import 'swiper/css/autoplay';
 
 export default function FeaturedProjectsSlider() {
@@ -20,33 +19,43 @@ export default function FeaturedProjectsSlider() {
       slidesPerView={1}                // One slide visible
       spaceBetween={3}                // Space between slides
       centeredSlides={true}          // Center the active slide
-      loop={true}        
+      loop={false}        
       autoplay={{                      // Auto-scroll settings
         delay: 3000,                  // 3s per slide
         disableOnInteraction: false, // Keep autoplay after user interaction
         pauseOnMouseEnter: true,
       }}
-      mousewheel={true}              // Optional: control with scroll
-      modules={[Autoplay, Mousewheel]}
+      modules={[Autoplay]}
       className="lg:h-[65vh] w-[90vw] flex justify-center items-center rounded-xl"
     >
       {projects.map((project, index) => (
         <SwiperSlide key={index} className='w-full h-full'>
           <motion.div initial={{ opacity: 0, y: 70 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className='flex justify-center items-center gap-5'>
             <div className='relative group mb-8 hover:scale-95 duration-300 transition-shadow shadow-lg hover:shadow-[0_4px_15px_rgba(124,58,237,0.5)] rounded-2xl'>
-              <Image className='rounded-xl md:rounded-2xl border-2 border-black cursor-pointer object-cover' src={project.img} alt='project_img' width={700} height={700} loading="eager"/>
+              <Link href={`/projects/${project.id}`}>
+                <Image className='rounded-xl md:rounded-2xl border-2 border-black cursor-pointer object-cover' src={project.img} alt='project_img' width={700} height={700} loading="eager"/>
+              </Link>
 
               {index < 3 && (
-                <Badge className='absolute top-2 left-3 bg-blue-600 text-white px-3 py-1 z-10 animate-bounce'>
+                <Badge className='absolute top-2 left-3 bg-blue-600 text-white px-3 py-1 z-30 animate-bounce'>
                   New
                 </Badge>
               )}
 
-              <div className="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center p-4 rounded-2xl">
-                <div className="flex flex-col items-center gap-3">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white text-center">
-                    {project.name}
-                  </h1>
+              {/* Overlay Background Link */}
+              <Link
+                href={`/projects/${project.id}`}
+                className="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500 z-10 rounded-2xl"
+              />
+
+              {/* Overlay Content */}
+              <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center p-4 rounded-2xl z-20">
+                <div className="flex flex-col items-center gap-3 pointer-events-auto">
+                  <Link href={`/projects/${project.id}`}>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white text-center hover:text-blue-400 transition cursor-pointer">
+                      {project.name}
+                    </h1>
+                  </Link>
                   <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3">
                     <Link href={project.url} target="_blank" className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] text-white shadow-lg hover:scale-105 transition">
                       <div className="p-2 rounded-xl bg-white/20">

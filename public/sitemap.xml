@@ -35,6 +35,13 @@
 
   <!-- Project pages -->
   <url>
+    <loc>https://sandeep-pati.vercel.app/projects/portfolio</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://sandeep-pati.vercel.app/projects/nexchat</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>

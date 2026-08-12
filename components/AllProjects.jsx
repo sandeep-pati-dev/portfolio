@@ -116,19 +116,21 @@ const AllProjects = () => {
             <div className="relative aspect-[16/11] overflow-hidden">
 
 
-              <Image
-                src={project.img}
-                alt={project.name}
-                width={600}
-                height={400}
-                className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
-              />
+              <Link href={`/projects/${project.id}`}>
+                <Image
+                  src={project.img}
+                  alt={project.name}
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover transition duration-700 group-hover:scale-110 cursor-pointer"
+                />
+              </Link>
 
 
 
               {index < 3 && (
 
-                <Badge className="absolute top-3 left-3 bg-blue-600 text-white border-0 px-3 py-1 z-15">
+                <Badge className="absolute top-3 left-3 bg-blue-600 text-white border-0 px-3 py-1 z-30">
                   New
                 </Badge>
 
@@ -138,7 +140,7 @@ const AllProjects = () => {
 
               <Link
                 href={`/projects/${project.id}`}
-                className="absolute z-12 top-3 right-3 p-2 rounded-xl bg-black/40 backdrop-blur-md text-white hover:bg-blue-600 transition"
+                className="absolute z-30 top-3 right-3 p-2 rounded-xl bg-black/40 backdrop-blur-md text-white hover:bg-blue-600 transition"
               >
 
                 <BookOpen size={18} />
@@ -147,15 +149,24 @@ const AllProjects = () => {
 
 
 
-              <div className="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500 hidden lg:flex items-center justify-center">
+              {/* Overlay Background Link */}
+              <Link
+                href={`/projects/${project.id}`}
+                className="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500 hidden lg:block z-10"
+              />
+
+              {/* Overlay Content */}
+              <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-500 hidden lg:flex items-center justify-center z-20">
 
 
-                <div className="flex flex-col items-center gap-5">
+                <div className="flex flex-col items-center gap-5 pointer-events-auto">
 
 
-                  <h2 className="text-2xl md:text-3xl font-black text-white text-center">
-                    {project.name}
-                  </h2>
+                  <Link href={`/projects/${project.id}`}>
+                    <h2 className="text-2xl md:text-3xl font-black text-white text-center hover:text-blue-400 transition cursor-pointer">
+                      {project.name}
+                    </h2>
+                  </Link>
 
 
 

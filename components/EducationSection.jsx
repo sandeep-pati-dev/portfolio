@@ -73,8 +73,8 @@ const EducationSection = () => {
             </div>
 
 
-            <span className="px-3 py-1 rounded-full text-xs font-bold bg-yellow-700/10 text-yellow-600">
-              In Progress
+            <span className="px-3 py-1 rounded-full text-xs font-bold bg-emerald-700/10 text-emerald-600">
+              Completed
             </span>
 
           </div>

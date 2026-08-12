@@ -169,7 +169,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="font-bold text-[26px] md:text-3xl lg:text-4xl drop-shadow-lg bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] bg-clip-text text-transparent"
+              className="font-bold text-[26px] md:text-3xl lg:text-4xl drop-shadow-lg gradient-text"
             >
               <Typewriter
                 options={{

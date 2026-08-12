@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="absolute z-10 w-full mx-auto p-8 md:p-10 bg-black border-t border-slate-800 shadow-xl text-gray-300">
         <div className="grid lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2">
-            <h2 className="text-3xl font-black bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] bg-clip-text text-transparent">
+            <h2 className="text-3xl font-black gradient-text">
               Sandeep Pati
             </h2>
             <p className="mt-3 max-w-md text-gray-400 font-medium leading-relaxed">

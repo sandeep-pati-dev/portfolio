@@ -99,7 +99,7 @@ const Navbar = () => {
   ];
 
   return (
-    <motion.div initial={{opacity:0,y:-40}} animate={{opacity:1,y:0}} transition={{duration:0.7,ease:"easeOut"}} className="fixed top-3 z-50 w-[90vw] lg:w-4xl backdrop-blur-xs sm:backdrop-blur-sm md:backdrop-blur-lg bg-black/5 px-5 py-3 rounded-4xl border-2 border-[#2563eb] mx-auto left-1/2 -translate-x-1/2">
+    <motion.div initial={{opacity:0,y:-40}} animate={{opacity:1,y:0}} transition={{duration:0.7,ease:"easeOut"}} className="fixed top-3 z-50 w-[90vw] lg:w-4xl backdrop-blur-md bg-white/70 dark:bg-black/50 px-5 py-3 rounded-3xl border border-gray-200 dark:border-white/10 mx-auto left-1/2 -translate-x-1/2 shadow-lg">
       <div className="flex items-center justify-between">
         <Link href="/">
           <motion.div whileHover={{scale:1.05}} transition={{duration:0.3}} className="flex items-center gap-2 cursor-pointer">
@@ -110,7 +110,7 @@ const Navbar = () => {
                 <AvatarFallback className="font-bold font-serif">SP</AvatarFallback>
               </Avatar>
             </div>
-            <h1 className="font-black text-2xl bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] bg-clip-text text-transparent">
+            <h1 className="font-black text-lg sm:text-2xl gradient-text whitespace-nowrap">
               Sandeep Pati
             </h1>
           </motion.div>
@@ -149,7 +149,7 @@ const Navbar = () => {
             </span>
           </motion.button>
         </div>
-        <motion.button whileTap={{scale:0.9,rotate:10}} className="lg:hidden p-2 rounded-2xl bg-white/5 border-[2] border-[#2563eb] text-[#2563eb]" onClick={()=>setOpen(!open)}>
+        <motion.button whileTap={{scale:0.9,rotate:10}} className="lg:hidden p-2 rounded-2xl bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white" onClick={()=>setOpen(!open)}>
           {
             open
             ?
@@ -161,13 +161,13 @@ const Navbar = () => {
       </div>
       {
         open && (
-          <motion.div initial={{opacity:0,height:0,y:-10}} animate={{opacity:1,height:"auto",y:0}} transition={{duration:0.3}} className="lg:hidden mt-4 flex flex-col gap-2" ref={menuRef}>
+          <motion.div initial={{opacity:0,height:0,y:-10}} animate={{opacity:1,height:"auto",y:0}} transition={{duration:0.3}} className="lg:hidden mt-4 flex flex-col gap-2.5" ref={menuRef}>
             {
               navbarItems.map((item,index)=>{
                 const isActive=currentPath===item.href;
                 return (
                   <motion.div key={index} initial={{opacity:0,x:-30}} animate={{opacity:1,x:0}} transition={{duration:0.3,delay:index*0.08}}>
-                    <Link href={item.href} onClick={()=>setOpen(false)} className={`group relative flex items-center gap-3 px-4 py-1 rounded-xl overflow-hidden duration-300 ${isActive ? "bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] text-white shadow-lg" : "bg-white/2 border border-white/10"}`}>
+                    <Link href={item.href} onClick={()=>setOpen(false)} className={`group relative flex items-center gap-3 px-4 py-2.5 rounded-xl overflow-hidden duration-300 ${isActive ? "bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] text-white shadow-lg" : "bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10"}`}>
                       {!isActive && (
                         <div className="absolute inset-0 bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] translate-x-full group-hover:translate-x-0 duration-500"/>
                       )}
@@ -182,7 +182,7 @@ const Navbar = () => {
                 )
               })
             }
-            <motion.button initial={{opacity:0,x:-30}} animate={{opacity:1,x:0}} transition={{duration:0.3,delay:0.35}} onClick={toggleTheme} className="flex justify-between items-center px-4 py-1 rounded-xl bg-white/2 border border-white/10 cursor-pointer mb-1.5">
+            <motion.button initial={{opacity:0,x:-30}} animate={{opacity:1,x:0}} transition={{duration:0.3,delay:0.35}} onClick={toggleTheme} className="flex justify-between items-center px-4 py-2.5 rounded-xl bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 cursor-pointer mb-1.5">
               <div className="flex items-center gap-3 font-semibold">
                 <div className='p-1.5 bg-white/10 rounded-lg'>
                   {

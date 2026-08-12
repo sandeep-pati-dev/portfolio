@@ -43,54 +43,57 @@ const About = () => {
                   </div>
                 </motion.div>
     
-                <div className="flex justify-center mt-3 px-2">
-                  <div>
-                    <div className='flex justify-between items-center'>
-                      <h1 className='font-black text-3xl bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] bg-clip-text text-transparent'>Sandeep Pati</h1>
-                      <div>
-                        <Link href="/resume1.pdf" target="_blank" className="group relative flex items-center gap-2 px-4 py-2.5 rounded-xl overflow-hidden backdrop-blur-xl bg-gradient-to-r from-[#2563eb]/80 via-[#3b82f6]/80 to-[#06b6d4]/80 border border-gray-300 shadow-lg cursor-pointer hover:scale-105 transition-all duration-300">
-                          <div className="absolute inset-0 bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                          <div className="relative z-10 flex items-center gap-2">
-                            <div className="p-1.5 rounded-lg bg-white/20 transition-all duration-300">
-                              <FileText size={16} className="group-hover:rotate-12 transition-transform duration-300"/>
-                            </div>
-                            <div>
-                              <p className="font-bold text-sm">
-                                Resume
-                              </p>
-                              <p className="text-[10px] opacity-70">
-                                Experience & Skills
-                              </p>
-                            </div>
-                          </div>
-                        </Link>
-                      </div>
+                <div className="flex flex-col items-center md:items-start mt-3 px-2 w-full max-w-xl">
+                  <div className="w-full flex flex-col md:flex-row justify-between items-center md:items-start gap-4">
+                    <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                      <h1 className="font-black text-3xl gradient-text w-fit">
+                        Sandeep Pati
+                      </h1>
+                      <h2 className="font-extrabold text-[20px] md:text-2xl gradient-text mt-1 w-fit">
+                        <Typewriter
+                          options={{
+                            strings: [
+                              "Software Developer",
+                              "Java Enthusiast",
+                              "MERN Stack Developer",
+                              "Full-Stack Developer",
+                              "Problem Solver",
+                              "OOP/DSA Practitioner"
+                            ],
+                            autoStart: true,
+                            loop: true,
+                            pauseFor: 700,
+                            typeSpeed: 100, 
+                            backSpeed: 50,
+                            cursor: "_",
+                          }}
+                        />
+                      </h2>
                     </div>
-                    <h2 className='font-extrabold text-[22px] md:text-2xl bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] bg-clip-text text-transparent'>
-                      <Typewriter
-                        options={{
-                          strings: [
-                            "Software Developer",
-                            "Java Enthusiast",
-                            "MERN Stack Developer",
-                            "Full-Stack Developer",
-                            "Problem Solver",
-                            "OOP/DSA Practitioner"
-                          ],
-                          autoStart: true,
-                          loop: true,
-                          pauseFor: 700,
-                          typeSpeed: 100, 
-                          backSpeed: 50,
-                          cursor: "_",
-                        }}
-                      />
-                    </h2>
-    
-                    <p className="max-w-lg md:text-[17px]">
-                      Hello! I'm Sandeep, a passionate software developer who enjoys transforming ideas into practical and efficient applications. My interests include Java, the MERN stack, backend development, object-oriented programming, and modern web technologies. I love solving challenging problems, building scalable software, and continuously learning new tools and frameworks to become a better developer.
-                    </p>
+
+                    <div className="shrink-0">
+                      <Link href="/resume1.pdf" target="_blank" className="group relative flex items-center gap-2 px-4 py-2.5 rounded-xl overflow-hidden backdrop-blur-xl bg-gradient-to-r from-[#2563eb]/80 via-[#3b82f6]/80 to-[#06b6d4]/80 border border-gray-300 shadow-lg cursor-pointer hover:scale-105 transition-all duration-300">
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="relative z-10 flex items-center gap-2">
+                          <div className="p-1.5 rounded-lg bg-white/20 transition-all duration-300">
+                            <FileText size={16} className="group-hover:rotate-12 transition-transform duration-300"/>
+                          </div>
+                          <div className="text-left font-sans">
+                            <p className="font-bold text-sm">
+                              Resume
+                            </p>
+                            <p className="text-[10px] opacity-70">
+                              Experience & Skills
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
+     
+                  <p className="max-w-lg md:text-[17px] text-center md:text-left mt-5 leading-relaxed">
+                    Hello! I'm Sandeep, a passionate software developer who enjoys transforming ideas into practical and efficient applications. My interests include Java, the MERN stack, backend development, object-oriented programming, and modern web technologies. I love solving challenging problems, building scalable software, and continuously learning new tools and frameworks to become a better developer.
+                  </p>
                 </div>
             </motion.div>
 
