@@ -21,11 +21,11 @@ export const projects = [
     },
     {
         id: "linkpilot",
-        name: "LinkPilot",
+        name: "LinkPulse",
         img: "/projects/link-pilot.png",
-        url: "https://link-pilot-ten.vercel.app",
+        url: "https://link-pulse-ten.vercel.app",
         github: "https://github.com/sandeep-pati-dev/LinkPilot",
-        desc: "LinkPilot is a Next.js/React link-management app featuring user authentication, QR code generation, and link shortening capabilities. Styled with Tailwind CSS, it uses MongoDB for data persistence, bcryptjs for secure password hashing, and jsonwebtoken (JWT) for secure authentication.",
+        desc: "LinkPulse is a Next.js/React link-management app featuring user authentication, QR code generation, and link shortening capabilities. Styled with Tailwind CSS, it uses MongoDB for data persistence, bcryptjs for secure password hashing, and jsonwebtoken (JWT) for secure authentication.",
         frameWork: "next",
         technologies: ["Next.js", "React", "Tailwind CSS", "Mongoose", "MongoDB", "QRCode", "JWT", "Bcryptjs", "React Icons"]
     },

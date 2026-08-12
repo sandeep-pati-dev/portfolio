@@ -230,7 +230,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 }}
                 >
-                  <Link
+                  <a
                     href="/resume1.pdf"
                     target="_blank"
                     className="group relative flex items-center gap-3 px-6 py-3.5 rounded-2xl overflow-hidden md:backdrop-blur-xl bg-white/10 border border-gray-300 shadow-lg cursor-pointer"
@@ -250,7 +250,7 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-                  </Link>
+                  </a>
                 </motion.div>
 
                 <motion.div

@@ -72,7 +72,7 @@ const About = () => {
                     </div>
 
                     <div className="shrink-0">
-                      <Link href="/resume1.pdf" target="_blank" className="group relative flex items-center gap-2 px-4 py-2.5 rounded-xl overflow-hidden backdrop-blur-xl bg-gradient-to-r from-[#2563eb]/80 via-[#3b82f6]/80 to-[#06b6d4]/80 border border-gray-300 shadow-lg cursor-pointer hover:scale-105 transition-all duration-300">
+                      <a href="/resume1.pdf" target="_blank" className="group relative flex items-center gap-2 px-4 py-2.5 rounded-xl overflow-hidden backdrop-blur-xl bg-gradient-to-r from-[#2563eb]/80 via-[#3b82f6]/80 to-[#06b6d4]/80 border border-gray-300 shadow-lg cursor-pointer hover:scale-105 transition-all duration-300">
                         <div className="absolute inset-0 bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <div className="relative z-10 flex items-center gap-2">
                           <div className="p-1.5 rounded-lg bg-white/20 transition-all duration-300">
@@ -87,7 +87,7 @@ const About = () => {
                             </p>
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   </div>
      

@@ -43,7 +43,7 @@ export const metadata = {
   },
 
   icons: {
-    icon: "/favicon.ico",
+    icon: "/mypic.jpeg",
   },
 
   // 4. Global open-graph structural definitions
