@@ -58,7 +58,7 @@
 //                 <a href='https://www.linkedin.com/in/sandeep-pati-537ba030b/' target="_blank" className="transition-transform duration-300 hover:scale-150 hover:text-blue-700 hover:rotate-12 hover:animate-bounce"><Linkedin className='w-6 h-6'/></a>
 //                 <a href='https://github.com/sandeep14032004'  target="_blank" className="transition-transform duration-300 hover:scale-150 hover:text-slate-50 hover:rotate-12 hover:animate-bounce"><GithubIcon className='w-6 h-6'/></a>
 //                 <a href='mailto:sandeeppati69@gmail.com'  className="transition-transform duration-300 hover:scale-150 hover:text-red-600 hover:rotate-12 hover:animate-bounce"><MailIcon className='w-6 h-6'/></a>
-//                 {/* href="https://mail.google.com/mail/?view=cm&fs=1&to=afghfh@gmail.com" */}
+//                 {/* href="https://mail.google.com/mail/?view=cm&fs=1&to=sandeeppati69@gmail.com" */}
 //               </div>
 
 //               <div className='text-center'>
@@ -68,9 +68,9 @@
 //               </div>
 //             </div>
 
-//             <Link href="https://www.google.com/maps?q=Shahjahanpur,Uttar+Pradesh,India" target="_blank" rel="noopener noreferrer" className='mt-3 flex justify-center items-start gap-1 text-[13px] md:text-[16px] cursor-pointer group'>
+//             <Link href="https://www.google.com/maps?q=Jagatsinghpur,Odisha,India" target="_blank" rel="noopener noreferrer" className='mt-3 flex justify-center items-start gap-1 text-[13px] md:text-[16px] cursor-pointer group'>
 //               <MapPin className='h-4 w-4 md:h-5 md:w-5 transition-transform duration-300 group-hover:scale-150 group-hover:animate-bounce group-hover:text-blue-700' />
-//               <span>Shahjahanpur, Uttar Pradesh, India · Open to relocation</span>
+//               <span>Jagatsinghpur, Odisha, India · Open to relocation</span>
 //             </Link>
 //           </motion.div>
 
@@ -244,7 +244,7 @@ const Contact = () => {
             </Link>
             <div className="mt-5 flex items-center gap-2 text-sm text-gray-600 font-semibold items-start">
               <MapPin size={18} className="text-blue-700" />
-              Odisha, India
+              Jagatsinghpur, Odisha, India
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="lg:col-span-3 rounded-3xl p-6 bg-white/5 md:backdrop-blur-lg border border-gray-200/40 shadow-xl">

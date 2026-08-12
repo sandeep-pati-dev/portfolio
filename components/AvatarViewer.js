@@ -127,6 +127,7 @@ export default function AvatarViewer() {
 
   /* model-viewer load / progress */
   useEffect(() => {
+    import("@google/model-viewer").catch(() => {});
     const viewer = viewerRef.current;
     if (!viewer) return;
     const onLoad     = () => setIsLoaded(true);

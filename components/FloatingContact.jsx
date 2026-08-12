@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { MessageSquareText, X, Mail, Github, Sparkles } from "lucide-react"
+import { MessageSquareText, X, Mail, Github } from "lucide-react"
 import ChatBotDialog from "./ChatBotDialog"
 
 export default function FloatingContact() {
@@ -25,7 +25,7 @@ export default function FloatingContact() {
     },
     {
       name: "Concierge Chat",
-      icon: <Sparkles className="group-hover:text-blue-400 group-hover:rotate-12 duration-300" size={21} />,
+      icon: <MessageSquareText className="group-hover:text-blue-400 group-hover:rotate-12 duration-300" size={21} />,
       chat: true,
       hoverClasses: "hover:border-blue-500 hover:text-blue-400 hover:bg-blue-500/10 group"
     }

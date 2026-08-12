@@ -290,9 +290,6 @@ npm install
 Create a `.env.local` file in the project root.
 
 ```env
-# Gemini API Key (For AI Portfolio Assistant Chatbot)
-GEMINI_API_KEY=your_gemini_api_key
-
 # EmailJS Configuration (For contact form)
 NEXT_PUBLIC_SERVICE_ID=your_service_id
 NEXT_PUBLIC_TEMPLATE_ID=your_template_id

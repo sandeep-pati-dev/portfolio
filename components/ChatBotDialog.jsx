@@ -1,8 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Bot, Circle, Send, Sparkles, X } from "lucide-react";
-import axios from "axios";
+import { Bot, Circle, Send, X } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
 const ChatBotDialog = ({ open, setOpen }) => {
@@ -127,7 +126,7 @@ const ChatBotDialog = ({ open, setOpen }) => {
             <li>Node.js & Express.js</li>
             <li>MongoDB & Mongoose</li>
             <li>Tailwind CSS & shadcn/ui</li>
-            <li>JWT, Socket.IO, Google Gemini API</li>
+            <li>JWT, Socket.IO</li>
           </ul>
         </div>
       );
@@ -169,23 +168,10 @@ const ChatBotDialog = ({ open, setOpen }) => {
       setThinking("Thinking" + ".".repeat(count % 4));
     }, 400);
 
-    try {
-      const { data } = await axios.post("/api/chat", {
-        message: userText,
-      });
-
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "bot",
-          text: data.reply,
-          time: getDateTime(),
-        },
-      ]);
-    } catch (error) {
-      console.log("Gemini failed. Using fallback.");
-
-      // Use your existing local chatbot
+    setTimeout(() => {
+      clearInterval(thinkingInterval);
+      setThinking("");
+      setSending(false);
       setMessages((prev) => [
         ...prev,
         {
@@ -194,11 +180,7 @@ const ChatBotDialog = ({ open, setOpen }) => {
           time: getDateTime(),
         },
       ]);
-    } finally {
-      clearInterval(thinkingInterval);
-      setThinking("");
-      setSending(false);
-    }
+    }, 600);
   };
 
   const shortcuts = ["Projects", "Resume", "Contact", "Skills"];
@@ -223,7 +205,7 @@ const ChatBotDialog = ({ open, setOpen }) => {
             <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-xl bg-blue-500/20">
-                  <Sparkles size={22} className="text-blue-400" />
+                  <Bot size={22} className="text-blue-400" />
                 </div>
                 <div>
                   <h2 className="font-bold text-white">Sandeep's Concierge</h2>

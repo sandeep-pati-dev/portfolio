@@ -16,7 +16,7 @@ const Footer = () => {
             </p>
             <div className="mt-5 flex items-center gap-2 text-sm text-gray-400 font-semibold">
               <MapPin size={18} className="text-blue-700"/>
-              Odisha, India
+              Jagatsinghpur, Odisha, India
             </div>
             <div className="mt-6">
               <Link href="/projects" className="group relative inline-flex items-center gap-3 mt-3 px-6 py-3.5 rounded-2xl overflow-hidden bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] text-white shadow-lg cursor-pointer hover:scale-105 transition-all duration-300">

@@ -1,17 +1,22 @@
 'use client';
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTheme } from "@/components/ThemeProvider";
+import { usePathname } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { toast, Toaster } from "sonner"
+import { toast, Toaster } from "sonner";
 import styles from "@/components/AnimatedBackground.module.css";
 import { Info } from "lucide-react";
 import Cursor from "@/components/Cursor";
+import Loader from "@/components/Loader";
+import { AnimatePresence } from "framer-motion";
 
 
 export default function ThemeWrapper({ children }) {
  const { theme } = useTheme(); 
+ const pathname = usePathname();
+ const [isNavigating, setIsNavigating] = useState(false);
 
 
  const mounted = useRef(false); // for toast else it will show error in mounted ans if not use mounted it shows duplicate toast
@@ -27,12 +32,44 @@ export default function ThemeWrapper({ children }) {
     }, 7000);
   }, []);
 
+  // Reset navigating state when pathname changes
+  useEffect(() => {
+    setIsNavigating(false);
+  }, [pathname]);
+
+  // Intercept local link navigation clicks to trigger loading state immediately
+  useEffect(() => {
+    const handleLinkClick = (e) => {
+      const anchor = e.target.closest("a");
+      if (!anchor) return;
+
+      const href = anchor.getAttribute("href");
+      const target = anchor.getAttribute("target");
+
+      if (href && href.startsWith("/") && !href.startsWith("/#") && target !== "_blank") {
+        const destinationPath = href.split("#")[0];
+        if (destinationPath !== pathname) {
+          setIsNavigating(true);
+        }
+      }
+    };
+
+    document.addEventListener("click", handleLinkClick);
+    return () => {
+      document.removeEventListener("click", handleLinkClick);
+    };
+  }, [pathname]);
+
 
 
   return (
     <>
     <Toaster/>
     <Cursor/>
+
+    <AnimatePresence mode="wait">
+      {isNavigating && <Loader fullScreen={true} />}
+    </AnimatePresence>
 
       <div className={`flex justify-center items-center w-full ${theme === 'light'? "" : 'text-white'}`}>
         <Navbar />

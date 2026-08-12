@@ -5,8 +5,11 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowLeft, Code2, Home, Search } from "lucide-react";
+import dynamic from "next/dynamic";
 
 import styles from "@/components/AnimatedBackground.module.css";
+
+const AvatarViewer = dynamic(() => import("@/components/AvatarViewer"), { ssr: false });
 
 export default function NotFound() {
   const router = useRouter();
@@ -211,15 +214,9 @@ export default function NotFound() {
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 4, repeat: Infinity }}
             className="relative z-10 flex flex-col items-center">
-            <Image
-              src="/avator.png"
-              alt="Sandeep Pati"
-              width={360}
-              height={360}
-              priority
-              className="w-64 md:w-80 drop-shadow-[0_20px_40px_rgba(37,99,235,.35)]"/>
+            <AvatarViewer />
             {/* Floating Platform */}
-            <div className="w-52 h-44 sm:w-60 sm:h-48 bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] rounded-full [transform:rotateX(-70deg)] shadow-[0_20px_40px_rgba(0,0,0,0.4)] -mt-10 border-[5px] border-gray-200/80 hover:scale-110 duration-300 cursor-pointer" />
+            <div className="w-52 h-44 sm:w-60 sm:h-48 bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] rounded-full [transform:rotateX(-70deg)] shadow-[0_20px_40px_rgba(0,0,0,0.4)] -mt-20 border-[5px] border-gray-200/80 hover:scale-110 duration-300 cursor-pointer" />
 
           </motion.div>
         </motion.div>
