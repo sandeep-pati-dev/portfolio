@@ -124,6 +124,23 @@ export default function AvatarViewer() {
   const viewerRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      const mqlWidth = window.matchMedia("(max-width: 768px)");
+      const mqlPointer = window.matchMedia("(pointer: coarse)");
+      setIsMobile(mqlWidth.matches || mqlPointer.matches);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    window.addEventListener("orientationchange", checkMobile);
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+      window.removeEventListener("orientationchange", checkMobile);
+    };
+  }, []);
 
   /* model-viewer load / progress */
   useEffect(() => {
@@ -169,7 +186,7 @@ export default function AvatarViewer() {
           <model-viewer
             ref={viewerRef}
             src="/my-avatar.glb"
-            camera-controls
+            camera-controls={!isMobile ? true : undefined}
             disable-zoom
             disable-pan
             auto-rotate
