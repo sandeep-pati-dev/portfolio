@@ -58,11 +58,11 @@ export default function Home() {
             <div className="relative">
               <div className="absolute -inset-5 rounded-full border border-white/10 animate-pulse" />
               <Image
-                src="/logo.png"
+                src="/mypic.jpeg"
                 alt="logo"
                 width={100}
                 height={100}
-                className="rounded-3xl border border-white/20 shadow-2xl"
+                className="rounded-3xl border border-white/20 shadow-2xl object-cover"
               />
             </div>
           </motion.div>
@@ -454,10 +454,7 @@ export default function Home() {
           <p className="text-[#2563eb] font-semibold">Developer Environment</p>
           <h2 className="text-3xl md:text-4xl font-bold mt-2">
             {" "}
-            Behind The{" "}
-            <span className="bg-gradient-to-r from-[#2563eb] to-[#3b82f6] bg-clip-text text-transparent">
-              Code
-            </span>
+            Behind The Code
           </h2>
           <p className="mt-3 max-w-xl mx-auto">
             A quick look at my development workflow, tools and deployment
@@ -557,14 +554,10 @@ export default function Home() {
             Interactive playground
           </p>
           <h2 className="text-3xl md:text-4xl font-bold mt-2">
-            My{" "}
-            <span className="bg-gradient-to-r from-[#2563eb] to-[#06b6d4] bg-clip-text text-transparent">
-              Tech Stack
-            </span>
+            My
+            Tech Stack
           </h2>
-          <p className="mt-3 text-sm text-gray-400 max-w-md mx-auto">
-            Check out the list of technologies below, or hover &amp; push the 3D balls around in the playground
-          </p>
+
         </div>
 
         {/* Skill Pills Grid */}

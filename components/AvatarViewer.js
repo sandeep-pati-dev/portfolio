@@ -106,7 +106,7 @@ function AvatarLoader({ progress }) {
             className="h-full rounded-full"
             style={{
               width: `${progress}%`,
-              background: "linear-gradient(90deg, #2563eb, #06b6d4)",
+              background: "linear-gradient(90deg, #6366f1, #ec4899)",
             }}
             transition={{ duration: 0.3 }}
           />

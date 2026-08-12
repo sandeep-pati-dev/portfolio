@@ -60,11 +60,12 @@ export default function Loader({ fullScreen = true }) {
           />
           {/* Logo center mark */}
           <motion.div 
-            animate={{ scale: [0.9, 1.1, 0.9] }}
+            animate={{ scale: [0.95, 1.05, 0.95] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-            className={`w-4 h-4 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.6)]
-              ${theme === "light" ? "bg-cyan-600 shadow-cyan-500/50" : "bg-emerald-400 shadow-emerald-400/50"}`}
-          />
+            className="w-10 h-10 rounded-full overflow-hidden border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.4)] z-20 absolute"
+          >
+            <img src="/mypic.jpeg" alt="Logo" className="w-full h-full object-cover" />
+          </motion.div>
         </div>
 
         {/* Text */}

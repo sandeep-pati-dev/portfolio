@@ -1,5 +1,63 @@
 @import "tailwindcss";
 
+@theme {
+  --color-blue-700: #4f46e5; /* indigo-600 */
+  --color-blue-600: #6366f1; /* indigo-500 */
+  --color-blue-500: #8b5cf6; /* violet-500 */
+  --color-blue-400: #a78bfa; /* violet-400 */
+  --color-blue-300: #c084fc; /* purple-400 */
+
+  --color-cyan-400: #f472b6; /* pink-400 */
+  --color-cyan-500: #ec4899; /* pink-500 */
+  --color-cyan-600: #db2777; /* pink-600 */
+
+  --color-emerald-400: #a78bfa; /* violet-400 */
+  --color-emerald-500: #8b5cf6; /* violet-500 */
+  --color-emerald-600: #7c3aed; /* violet-600 */
+
+  --color-teal-400: #f472b6; /* pink-400 */
+  --color-teal-500: #ec4899; /* pink-500 */
+}
+
+/* Hardcoded hex gradient overrides */
+.from-\[\#2563eb\], .ffrom-\[\#2563eb\], .from-\[\#2563eb\/20\], .from-\[\#2563eb\]\/20 {
+  --tw-gradient-from: #6366f1 var(--tw-gradient-from-position) !important; /* Indigo-500 */
+  --tw-gradient-to: rgba(99, 102, 241, 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.via-\[\#3b82f6\], .via-\[\#3b82f6\/20\], .via-\[\#3b82f6\]\/20 {
+  --tw-gradient-via: #8b5cf6 var(--tw-gradient-via-position) !important; /* Violet-500 */
+  --tw-gradient-to: rgba(139, 92, 246, 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to) !important;
+}
+
+.to-\[\#06b6d4\], .to-\[\#06b6d4\/20\], .to-\[\#06b6d4\]\/20 {
+  --tw-gradient-to: #ec4899 var(--tw-gradient-to-position) !important; /* Pink-500 */
+}
+
+/* Background overlay highlights */
+.from-\[\#2563eb\]\/20 {
+  --tw-gradient-from: rgba(99, 102, 241, 0.2) var(--tw-gradient-from-position) !important;
+}
+.via-\[\#3b82f6\]\/20 {
+  --tw-gradient-via: rgba(139, 92, 246, 0.2) var(--tw-gradient-via-position) !important;
+}
+.to-\[\#06b6d4\]\/20 {
+  --tw-gradient-to: rgba(236, 72, 153, 0.2) var(--tw-gradient-to-position) !important;
+}
+
+/* Direct background/border/text hex overrides */
+.border-\[\#2563eb\] {
+  border-color: #6366f1 !important; /* Indigo-500 */
+}
+.text-\[\#2563eb\] {
+  color: #6366f1 !important; /* Indigo-500 */
+}
+.bg-\[\#2563eb\] {
+  background-color: #6366f1 !important; /* Indigo-500 */
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -110,8 +168,8 @@ html {
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
-  background-color: #6ee7b7;
-  box-shadow: 0px 0px 30px 0px rgb(16, 185, 129);
+  background-color: #a78bfa; /* Violet-400 */
+  box-shadow: 0px 0px 30px 0px rgb(139, 92, 246); /* Violet-500 */
   mix-blend-mode: difference;
   transition: margin-top 0.3s ease-out, margin-left 0.3s ease-out, width 0.3s ease-out, height 0.3s ease-out;
 }

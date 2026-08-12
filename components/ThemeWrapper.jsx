@@ -88,9 +88,9 @@ export default function ThemeWrapper({ children }) {
           <div
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: `radial-gradient(circle at center, #06b6d4, transparent)`,
+              backgroundImage: `radial-gradient(circle at center, #ec4899, transparent)`,
               backgroundSize: "100% 100%",
-              background: `radial-gradient(circle at center, #06b6d4, transparent)`
+              background: `radial-gradient(circle at center, #ec4899, transparent)`
             }}
             
           >
@@ -111,9 +111,9 @@ export default function ThemeWrapper({ children }) {
           <div
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: `radial-gradient(circle at center, #10b981, transparent)`,
+              backgroundImage: `radial-gradient(circle at center, #8b5cf6, transparent)`,
               backgroundSize: "100% 100%",
-              background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(120, 180, 255, 0.25), transparent 70%), #000000",
+              background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 92, 246, 0.25), transparent 70%), #000000",
             }}
           >
             <div className={styles.context}>

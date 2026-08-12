@@ -59,7 +59,7 @@ const TECH_DEFS = [
   { name: "MySQL", abbr: "SQL", bg: "#00758f" },
   { name: "OOP", abbr: "OOP", bg: "#7c3aed" },
   { name: "DSA", abbr: "DSA", bg: "#db2777" },
-  { name: "Problem Solving", abbr: "PS", bg: "#2563eb" },
+  { name: "Problem Solving", abbr: "PS", bg: "#6366f1" },
   { name: "Git", abbr: "Git", bg: "#f05032" },
   { name: "GitHub", abbr: "GH", bg: "#24292e" },
   { name: "VS Code", abbr: "VS", bg: "#007acc" },
