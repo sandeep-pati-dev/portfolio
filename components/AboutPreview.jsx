@@ -90,11 +90,11 @@ const AboutPreview = () => {
             initial={{opacity:0,y:10}} viewport={{ once: true }} 
             whileInView={{opacity:1,y:0}}
             transition={{delay:0.5}}
-            className="mt-3 text-3xl font-black"
+            className="mt-3 text-3xl font-black text-gray-900 dark:text-white"
           >
-            Building
-            <span className="bg-gradient-to-r from-[#2563eb] to-[#3b82f6] bg-clip-text text-transparent">
-              {" "}modern experiences
+            Building{" "}
+            <span className="gradient-text">
+              modern experiences
             </span>
           </motion.h2>
           <motion.p
