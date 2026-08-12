@@ -192,7 +192,7 @@ const Contact = () => {
             </div>
             <div className="mt-6 flex items-center gap-4">
               <Avatar className="w-16 h-16 rounded-2xl border-2 border-blue-700 shadow-lg">
-                <AvatarImage src="https://github.com/sandeep14032004.png" className="object-cover" />
+                <AvatarImage src="/mypic.jpeg" className="object-cover" />
                 <AvatarFallback>
                   SP
                 </AvatarFallback>

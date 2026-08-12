@@ -29,7 +29,7 @@ const About = () => {
                   </motion.div>
                   <div className="relative p-2 rounded-[28px] bg-background/70 md:backdrop-blur-xl border border-white/10 shadow-2xl">
                     <Avatar className="w-[130px] h-[150px] rounded-2xl overflow-hidden">
-                      <AvatarImage src="https://github.com/sandeep14032004.png" alt="Profile"className="object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"/>
+                      <AvatarImage src="/mypic.jpeg" alt="Profile" className="object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"/>
                       <AvatarFallback>SP</AvatarFallback>
                     </Avatar>
                     <div className="absolute -bottom-2 left-1/2 -translate-x-1/2">

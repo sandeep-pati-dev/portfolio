@@ -106,7 +106,7 @@ const Navbar = () => {
             <div className="relative w-12 h-12">
               <div className="absolute inset-0 bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] p-1 rounded-full animate-[spin_1.5s_linear_infinite]"></div>
               <Avatar className="w-10 h-10 absolute inset-1 rounded-full z-10">
-                <AvatarImage src="https://github.com/sandeep14032004.png" alt="Profile_pic"/>
+                <AvatarImage src="/mypic.jpeg" alt="Profile_pic"/>
                 <AvatarFallback className="font-bold font-serif">SP</AvatarFallback>
               </Avatar>
             </div>
