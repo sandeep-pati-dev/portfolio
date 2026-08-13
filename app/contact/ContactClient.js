@@ -180,9 +180,9 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center">
           <h1 className="mt-3 text-4xl font-black">
-            Let's build something
-            <span className="bg-gradient-to-r from-[#2563eb] to-[#3b82f6] bg-clip-text text-transparent">
-              {" "}great.
+            Let's build something{" "}
+            <span className="gradient-text">
+              great.
             </span>
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-gray-600 font-semibold text-sm">

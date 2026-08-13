@@ -195,8 +195,7 @@ export default function Home() {
                 transition={{ delay: 0.6 }}
                 className="text-medium md:text-[18px] mt-1"
               >
-                I'm a passionate software developer with a strong foundation in Java, web development, and problem-solving. I enjoy building responsive web applications, designing efficient backend systems, and continuously expanding my knowledge through real-world projects.
-              </motion.p>
+                I am a passionate software developer skilled in Java, web development, and problem-solving, focused on building responsive applications and efficient backend systems.              </motion.p>
               <div className="flex flex-wrap gap-2.5 mt-5 justify-center lg:justify-start">
                 {[
                   "Full-Stack Development",
