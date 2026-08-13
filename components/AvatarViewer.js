@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Eye, EyeOff } from "lucide-react";
 
 /* ─── Interactive loader shown while GLB downloads ─────────────── */
 function AvatarLoader({ progress }) {
@@ -125,6 +126,7 @@ export default function AvatarViewer() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [progress, setProgress] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isOrbitActive, setIsOrbitActive] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -183,13 +185,46 @@ export default function AvatarViewer() {
           transition={{ duration: 0.6 }}
           className="absolute inset-0"
         >
+          {/* Active interaction indicator banner for mobile */}
+          <AnimatePresence>
+            {isMobile && isLoaded && isOrbitActive && (
+              <motion.div
+                initial={{ opacity: 0, y: -10, x: "-50%" }}
+                animate={{ opacity: 1, y: 0, x: "-50%" }}
+                exit={{ opacity: 0, y: -10, x: "-50%" }}
+                className="absolute top-4 left-1/2 z-20 px-3 py-1 rounded-full bg-blue-600/80 border border-blue-400/30 text-[10px] text-white font-mono font-bold backdrop-blur-md shadow-lg pointer-events-none tracking-wider uppercase text-center whitespace-nowrap"
+              >
+                Touch & drag to rotate
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Eye Button for Mobile Rotation Toggle */}
+          {isMobile && isLoaded && (
+            <button
+              onClick={() => setIsOrbitActive(!isOrbitActive)}
+              aria-label="Toggle avatar rotation interaction"
+              className={`absolute bottom-4 right-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border shadow-lg backdrop-blur-md transition-all duration-300 active:scale-95 ${
+                isOrbitActive
+                  ? "bg-blue-600/90 border-blue-400 text-white shadow-blue-500/20"
+                  : "bg-black/60 border-white/20 text-white/80 hover:text-white"
+              }`}
+            >
+              {isOrbitActive ? (
+                <Eye size={18} className="animate-pulse" />
+              ) : (
+                <EyeOff size={18} />
+              )}
+            </button>
+          )}
+
           <model-viewer
             ref={viewerRef}
             src="/my-avatar.glb"
-            camera-controls={!isMobile ? true : undefined}
+            camera-controls={(!isMobile || isOrbitActive) ? true : undefined}
             disable-zoom
             disable-pan
-            auto-rotate
+            auto-rotate={!isOrbitActive}
             auto-rotate-delay="1500"
             rotation-per-second="20deg"
             shadow-intensity="1.5"
@@ -206,7 +241,7 @@ export default function AvatarViewer() {
               height: "100%",
               background: "transparent",
               display: "block",
-              touchAction: "pan-y",
+              touchAction: isOrbitActive ? "none" : "pan-y",
             }}
           />
         </motion.div>

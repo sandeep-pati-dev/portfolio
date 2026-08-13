@@ -15,11 +15,15 @@ function isMobile() {
 
 /* ── Canvas-generated text-based textures ── */
 function createTextTexture(abbr, bg) {
-  const s = 256;
+  const s = 512;
   const canvas = document.createElement("canvas");
   canvas.width = s;
   canvas.height = s;
   const ctx = canvas.getContext("2d");
+
+  // High-quality canvas smoothing
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = "high";
 
   // Background circle
   ctx.fillStyle = bg;
@@ -28,21 +32,26 @@ function createTextTexture(abbr, bg) {
   ctx.fill();
 
   // Subtle border
-  ctx.strokeStyle = "rgba(255,255,255,0.22)";
-  ctx.lineWidth = 8;
+  ctx.strokeStyle = "rgba(255,255,255,0.25)";
+  ctx.lineWidth = 16;
   ctx.beginPath();
-  ctx.arc(s / 2, s / 2, s / 2 - 4, 0, Math.PI * 2);
+  ctx.arc(s / 2, s / 2, s / 2 - 8, 0, Math.PI * 2);
   ctx.stroke();
 
   // Centered text
-  const fs = abbr.length > 3 ? 50 : abbr.length > 2 ? 65 : 85;
+  const fs = abbr.length > 3 ? 100 : abbr.length > 2 ? 130 : 170;
   ctx.fillStyle = "#ffffff";
-  ctx.font = `700 ${fs}px "Segoe UI", Arial, sans-serif`;
+  ctx.font = `bold ${fs}px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.fillText(abbr, s / 2, s / 2 + 4);
+  ctx.fillText(abbr, s / 2, s / 2 + 8);
 
-  return new THREE.CanvasTexture(canvas);
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.minFilter = THREE.LinearMipmapLinearFilter;
+  texture.magFilter = THREE.LinearFilter;
+  texture.generateMipmaps = true;
+  texture.anisotropy = 16; // Maximum crispness when rotating
+  return texture;
 }
 
 const TECH_DEFS = [
@@ -71,7 +80,7 @@ const TECH_DEFS = [
 const BALL_COUNT = TECH_DEFS.length;
 
 /* ── Geometry (shared) ── */
-const sphereGeometry = new THREE.SphereGeometry(1, 20, 20);
+const sphereGeometry = new THREE.SphereGeometry(1, 48, 48);
 
 /* ── Shuffle helper ── */
 function shuffle(arr) {
@@ -250,8 +259,8 @@ export default function TechBalls() {
     <div ref={sectionRef} className="w-full h-full relative min-h-[350px]">
       <Canvas
         frameloop="demand"
-        dpr={mobile ? [1, 1] : [1, 1.5]}
-        gl={{ alpha: true, stencil: false, depth: false, antialias: false }}
+        dpr={mobile ? [1, 1.5] : [1, 2]}
+        gl={{ alpha: true, stencil: false, depth: true, antialias: true }}
         camera={{
           position: [0, 0, 20],
           fov: mobile ? 45 : 36,
