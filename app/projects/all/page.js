@@ -14,7 +14,7 @@ const All = () => {
     <div className='min-h-screen mt-[20vh] animate-fade-in pb-16'>
       <div className='flex justify-center items-center mb-7 px-4'>
         <div className='flex flex-col justify-center items-center text-center'>
-           <h1 className='font-black text-3xl md:text-4xl bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] bg-clip-text text-transparent'>My Work & Projects</h1>
+           <h1 className='font-black text-3xl md:text-4xl gradient-text'>My Work & Projects</h1>
            <span className='text-sm md:text-lg text-gray-600 font-semibold mt-2'>From small ideas to complete applications — this is my work.</span>
         </div>
       </div>

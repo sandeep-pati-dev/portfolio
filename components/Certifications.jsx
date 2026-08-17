@@ -55,7 +55,7 @@ const Certifications = () => {
     <section className="pb-16 px-4">
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-black bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#06b6d4] bg-clip-text text-transparent w-fit mx-auto">
+        <h2 className="text-3xl font-black gradient-text w-fit mx-auto">
           Certifications & Internships
         </h2>
         <p className="mt-3 text-sm font-semibold text-gray-500 max-w-2xl mx-auto">
